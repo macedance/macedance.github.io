@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Double-blind friendly meta -->
+  <meta name="title" content="MACE-Dance: Motion-Appearance Cascaded Experts for Music-Driven Dance Video Generation" />
+  <meta name="description" content="Anonymous project page for MACE-Dance, showcasing teaser and qualitative results" />
+
+  <meta name="author" content="Anonymous Authors" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="language" content="English" />
+
+  <!-- Open Graph / Twitter (generic) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Anonymous Project Page" />
+  <meta property="og:title" content="MACE-Dance — Anonymous Project Page" />
+  <meta property="og:description" content="Anonymous project page with teaser and result videos." />
+  <meta property="og:image" content="./teaser/teaser.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MACE-Dance — Anonymous Project Page" />
+  <meta name="twitter:description" content="Anonymous project page with teaser and result videos." />
+  <meta name="twitter:image" content="./teaser/teaser.png" />
+
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- JS -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Color title + one-video-per-row layout -->
+  <style>
+    :root{
+      --mcolor:#B556D8;   /* M */
+      --acolor:#877DCC;   /* A */
+      --ccolor:#79ABD3;   /* C */
+      --ecolor:#82D386;   /* E */
+    }
+
+    .fd-title{ font-weight:800; letter-spacing:-0.02em; }
+    .fd-subtitle{ margin-top:0.25rem; opacity:0.92; }
+
+    .fd-section{ padding-top:1.5rem; padding-bottom:1.5rem; }
+    .fd-divider{ height:1px; background:rgba(0,0,0,0.08); margin:1.25rem 0; }
+
+    /* One video per row */
+    .fd-row{ margin: 1.05rem 0 1.65rem; }
+    .fd-row video{ width:100%; height:auto; border-radius:12px; background:#000; display:block; }
+    .fd-cap{ margin-top:10px; font-size:1.02rem; line-height:1.35; }
+    .fd-cap small{ opacity:0.85; font-weight:500; }
+
+    /* Section headings spacing */
+    .fd-h2{ margin-top: 0.2rem; }
+    .fd-h3{ margin-top: 1.1rem; }
+
+    /* Optional: make the colored acronym slightly tighter like LaTeX */
+    .fd-acronym span{ display:inline-block; }
+  </style>
+
+  <title>MACE-Dance — Anonymous Project Page</title>
+</head>
+
+<body>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+    <!-- HERO (Anonymous; no author list) -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+
+              <!-- Colored title like your LaTeX -->
+              <h1 class="title is-1 publication-title fd-title fd-acronym" aria-label="MACE-Dance">
+                <span style="color:var(--mcolor)">M</span><span style="color:var(--acolor)">A</span><span style="color:var(--ccolor)">C</span><span style="color:var(--ecolor)">E</span><span style="color:#000">-Dance:</span>
+              </h1>
+
+              <p class="is-size-5 fd-subtitle">
+                <span style="color:var(--mcolor); font-weight:800;">Motion</span>-<span style="color:var(--acolor); font-weight:800;">Appearance</span>
+                <span style="color:var(--ccolor); font-weight:800;">Cascaded</span>
+                <span style="color:var(--ecolor); font-weight:800;">Experts</span>
+                for <br />
+                Music-Driven Dance Video Generation
+              </p>
+
+              <p class="is-size-6 fd-subtitle" style="margin-top:0.6rem;">
+                Anonymous Project Page (Double-blind)
+              </p>
+
+              <p class="fd-subtitle" style="margin-top: 0.6rem;">
+                Local clips are loaded from <code>./demo_vids/</code>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEASER IMAGE -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="./teaser/teaser.png" alt="MACE-Dance teaser"
+               style="width:95%; max-width:1200px; border-radius:12px;">
+            <h2 class="subtitle has-text-centered" style="margin-top: 12px;">
+              Leveraging the synergistic collaboration among the cascaded experts, <b>MACE-Dance</b> can generate diverse dance videos that 
+              not only exhibit kinematically plausible and artistically expressive motion, but also maintain spatiotemporal coherent appearance.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABSTRACT -->
+    <section class="section hero is-light fd-section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                With the rise of online dance-video platforms and rapid advances in AI-generated content (AIGC),
+                music-driven dance generation task has emerged as a compelling research direction. Despite substantial
+                progress in related domains such as music-driven 3D dance generation, pose-driven image animation, and
+                audio-driven talking-head synthesis, they cannot be directly adapted to this task. Moreover, the limited
+                studies in this task still struggle to jointly achieve high-quality visual appearance and human motion.
+                Accordingly, we present <b>MACE-Dance</b>, a music-driven dance video generation framework with cascaded
+                Mixture-of-Experts (MoE). The Motion Expert performs music-to-3D motion enforcing kinematic plausibility
+                and artistic expressiveness, while the Appearance Expert carries out motion-and-reference conditioned
+                video synthesis, preserving visual identity with spatiotemporal coherence. Specifically, the Motion Expert
+                adopts Diffusion Model with BiMamba-Transformer hybrid architecture and Guidance-Free Training (GFT)
+                strategy, achieving state-of-the-art (SOTA) performance in 3D dance generation task; the Appearance Expert
+                adopts a decoupled Kinematic–Aesthetic fine-tuning strategy, achieving state-of-the-art (SOTA) performance
+                in the pose-driven image animation task. To better benchmark this task, we curate a large-scale and diverse
+                dataset, and design a motion–appearance evaluation protocol. Based on them, <b>MACE-Dance</b> also achieves
+                the state-of-the-art (SOTA) performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section fd-section">
+      <div class="container is-max-desktop content">
+
+        <!-- ===================== Comparison ===================== -->
+        <h2 class="title is-3 fd-h2">Comparison</h2>
+
+        <h3 class="title is-4 fd-h3">Music-Driven Dance Video Generation</h3>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp1.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven Dance Video Generation</b> <small>(1)</small></div> -->
+        </div>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp2.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven Dance Video Generation</b> <small>(2)</small></div> -->
+        </div>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp3.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven Dance Video Generation</b> <small>(3)</small></div> -->
+        </div>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp4.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven Dance Video Generation</b> <small>(4)</small></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Music-Driven 3D Dance Generation</h3>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp_3d_1.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven 3D Dance Generation</b> <small>(1)</small></div> -->
+        </div>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_cmp_3d_2.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Music-Driven 3D Dance Generation</b> <small>(2)</small></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Pose-Driven 3D Dance Generation</h3>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_pd_1.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Pose-Driven 3D Dance Generation</b> <small>(1)</small></div> -->
+        </div>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_pd_2.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Pose-Driven 3D Dance Generation</b> <small>(2)</small></div> -->
+        </div>
+
+        <div class="fd-divider"></div>
+
+        <!-- ===================== Ablation Study ===================== -->
+        <h2 class="title is-3 fd-h2">Ablation Study</h2>
+
+        <h3 class="title is-4 fd-h3">Ablation on Motion Expert - Model Architecture</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_abl1.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Ablation on Motion Expert - Model Architecture</b></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Ablation on Motion Expert - Generative Strategy</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_abl2.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Ablation on Motion Expert - Generative Strategy</b></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Ablation on Appearance Expert - Effect of Kinematic-Aesthetic Stage</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_abl3.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Ablation on Appearance Expert - Effect of Kinematic-Aesthetic Stage</b></div> -->
+        </div>
+
+        <div class="fd-divider"></div>
+
+        <!-- ===================== Long Sequence Generation ===================== -->
+        <h2 class="title is-3 fd-h2">Long Sequence Generation</h2>
+
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_lg.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Long Sequence Generation</b></div> -->
+        </div>
+
+        <div class="fd-divider"></div>
+
+        <!-- ===================== Diverse Genre Generation ===================== -->
+        <h2 class="title is-3 fd-h2">Diverse Genre Generation</h2>
+
+        <h3 class="title is-4 fd-h3">Genre: Popping</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_dgl1.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Genre: Popping</b></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Genre: K-Pop</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_dgl2.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Genre: K-Pop</b></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Genre: Dai</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_dgl3.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Genre: Dai</b></div> -->
+        </div>
+
+        <h3 class="title is-4 fd-h3">Genre: Uyghur</h3>
+        <div class="fd-row">
+          <video controls playsinline preload="metadata">
+            <source src="./demo_vids/macedance_dgl4.mp4" type="video/mp4">
+          </video>
+          <!-- <div class="fd-cap"><b>Genre: Uyghur</b></div> -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>,
+              adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+              <br />
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+              </a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+  </script>
+</body>
+</html>
